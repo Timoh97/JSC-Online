@@ -83,4 +83,4 @@ Incase of any issues at hand, please email me at timohmugendi@gmail.com
 ## Preview
 
 ### License
-MIT LICENSE []
+MIT LICENSE [**TIMOTHY MUGENDI**]
