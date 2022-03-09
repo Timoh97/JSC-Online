@@ -50,11 +50,22 @@ This is a clone of the website for Instagram photo application.
 #### Setup the Database
 * Setup the database username, password, host then make migrations  
 ```bash
-      $ python manage.py makemigrations 
+      $ flask db init
+ 
 ```
 * Run migrations
 ```bash
-      $ python manage.py migrate
+      $ flask db migrate -m"commit message"
+```
+```bash
+      $ flask db upgrade  
+      
+      (each time the database models change repeat the migrate and upgrade commands.)
+```
+```bash
+      $ flask db --help   
+      
+      (to see all commands )
 ```
 ### Running the Application
 * To run the application, open the cloned repo in terminal and run the following commands:
