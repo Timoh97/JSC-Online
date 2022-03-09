@@ -86,6 +86,7 @@ Incase of any issues at hand, please email me at timohmugendi@gmail.com
   <img src="./screenshots/2.png" alt="screenshot" />
 
   <img src="./screenshots/3.png" alt="screenshot" />
-  
+
 ### License
-MIT LICENSE [**TIMOTHY MUGENDI**]
+<a href='https://github.com/Timoh97/JSC-Online/blob/master/LICENSE'>MIT LICENSE</a>
+ [**TIMOTHY MUGENDI**]
