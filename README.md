@@ -81,6 +81,11 @@ This is a clone of the website for Instagram photo application.
 ## Support and contact details
 Incase of any issues at hand, please email me at timohmugendi@gmail.com
 ## Preview
+ <img src="./screenshots/1.png" alt="screenshot" />
 
+  <img src="./screenshots/2.png" alt="screenshot" />
+
+  <img src="./screenshots/3.png" alt="screenshot" />
+  
 ### License
 MIT LICENSE [**TIMOTHY MUGENDI**]
