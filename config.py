@@ -1,4 +1,25 @@
-from flask import Flask
+import os
 
+class config:
+    
+    
+    @staticmethod
+    def init_app(app):
+        pass
 
-#register the blueprints
+class TestConfig(config):
+    pass
+
+class ProdConfig(config):
+    pass
+
+class DevConfig(config):
+    pass
+
+config_options={
+    'development': DevConfig,
+    
+    'production': ProdConfig,
+    
+        'test': TestConfig
+}
