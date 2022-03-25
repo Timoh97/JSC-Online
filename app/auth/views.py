@@ -6,7 +6,7 @@ def login():
   
 
   title = "login"
-  return render_template('auth/login.html',title=title)
+  return render_template('login.html',title=title)
 
 @auth.route('/signup')
 def signup():

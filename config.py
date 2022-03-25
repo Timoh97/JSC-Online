@@ -14,7 +14,7 @@ class ProdConfig(config):
     pass
 
 class DevConfig(config):
-    pass
+    DEBUG = True
 
 config_options={
     'development': DevConfig,
