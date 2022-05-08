@@ -15,9 +15,13 @@ class User(UserMixin,db.Model):
     username = db.Column(db.String(255))
     email = db.Column(db.String(255),unique = True,index = True)
     bio = db.Column(db.String(255))
+    designation = db.Column(db.String(255))
+    role = db.Column(db.String(255))
+    experience = db.Column(db.String(255))
     profile_pic_path = db.Column(db.String())
     pass_secure = db.Column(db.String(255))
     post = db.relationship('Post',backref = 'user',lazy = "dynamic")
+    department = db.relationship('Department',backref = 'user',lazy = "dynamic")
 
     @property
     def password(self):
@@ -34,6 +38,20 @@ class User(UserMixin,db.Model):
         return f'User {self.username}'
     
     
+class Department(db.Model):
+    _tablename_ = 'department'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(255))
+    description = db.Column(db.Text)
+    objectives = db.Column(db.String(255))
+    activities = db.Column(db.String(255))
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+
+    def save_department(self):
+        db.session.add(self)
+        db.session.commit()
+    def _repr_(self):
+        return f'Department {self.name}'
 class Comment(db.Model):
     _tablename_ = 'comments'
     id = db.Column(db.Integer, primary_key=True)
@@ -58,8 +76,7 @@ class Post(db.Model):
     content = db.Column(db.Text)
     date_posted = db.Column(db.DateTime, default=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-    upvote = db.relationship('Upvote',backref='pitch',lazy='dynamic')
-    downvote = db.relationship('Downvote',backref='pitch',lazy='dynamic')
+
 
     
     # save post
