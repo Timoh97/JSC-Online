@@ -11,6 +11,7 @@ class TestConfig(config):
     pass
 
 class ProdConfig(config):
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
     pass
 
 class DevConfig(config):
