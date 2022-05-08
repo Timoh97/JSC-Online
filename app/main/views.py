@@ -1,12 +1,14 @@
 from flask import render_template
 from . import main
 
-@main.route('/index')
+@main.route('/')
 def index():
   
 
   title = "Home page"
   return render_template('main/index.html',title=title)
+
+
 
 @main.route('/profile')
 def profile():
