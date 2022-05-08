@@ -8,10 +8,10 @@ bootstrap=Bootstrap()
 db=SQLAlchemy()
 # photos = UploadSet('photos',IMAGES)
 
-login_manager = LoginManager()
+# login_manager = LoginManager()
  
-login_manager.session_protection = 'strong'
-login_manager.login_view = 'auth.login'
+# login_manager.session_protection = 'strong'
+# login_manager.login_view = 'auth.login'
 
 
 def create_app(config_name):
@@ -24,7 +24,7 @@ def create_app(config_name):
    # Initializing flask extensions
    db.init_app(app)
    bootstrap.init_app(app)
-   login_manager.init_app(app)
+   # login_manager.init_app(app)
    
 #import the blueprints
    from .main import main as main_blueprint
